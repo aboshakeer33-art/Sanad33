@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سند للأكسسوارات - الخرطوم بحري</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- الهيدر -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <button class="menu-btn" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <div class="logo-section">
+                    <div class="logo-icon">س</div>
+                    <div class="logo-text">
+                        <h1>سند للأكسسوارات</h1>
+                        <p>الخرطوم بحري - حي السودان | طلب واتساب مباشر</p>
+                    </div>
+                </div>
+                
+                <button class="order-btn" onclick="openWhatsApp()">
+                    اطلب الآن
+                </button>
+                
+                <div class="cart-icon" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>القائمة</h3>
+            <button class="close-btn" onclick="toggleMenu()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+            <li><a href="sind-store.html"><i class="fas fa-store"></i> المتجر</a></li>
+            <li><a href="#products"><i class="fas fa-box"></i> المنتجات</a></li>
+            <li><a href="#contact"><i class="fas fa-phone"></i> تواصل معنا</a></li>
+        </ul>
+    </nav>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="main-content">
+        <!-- قسم البطل -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>أفضل منتجات كرابت مباشر في السودان</h2>
+                    <p>جودة عالية - أسعار منافسة - توصيل سريع</p>
+                    <button class="cta-btn" onclick="scrollToProducts()">
+                        تصفح المنتجات
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم المنتجات المميزة -->
+        <section class="featured-products" id="products">
+            <div class="container">
+                <h2 class="section-title">منتجات مميزة</h2>
+                <div class="products-grid" id="featuredProducts">
+                    <!-- سيتم ملؤها بالJavaScript -->
+                </div>
+                <div class="view-all">
+                    <a href="sind-store.html" class="view-all-btn">
+                        عرض جميع المنتجات <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم التصنيفات -->
+        <section class="categories">
+            <div class="container">
+                <h2 class="section-title">تصفح حسب التصنيف</h2>
+                <div class="categories-grid">
+                    <div class="category-card" onclick="filterByCategory('all')">
+                        <div class="category-icon">
+                            <i class="fas fa-th-large"></i>
+                        </div>
+                        <h3>الكل</h3>
+                    </div>
+                    <div class="category-card" onclick="filterByCategory('masak')">
+                        <div class="category-icon">
+                            <i class="fas fa-hand-rock"></i>
+                        </div>
+                        <h3>مقابض</h3>
+                    </div>
+                    <div class="category-card" onclick="filterByCategory('mafsal')">
+                        <div class="category-icon">
+                            <i class="fas fa-door-open"></i>
+                        </div>
+                        <h3>مفصلات</h3>
+                    </div>
+                    <div class="category-card" onclick="filterByCategory('lock')">
+                        <div class="category-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>أقفال</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم التواصل -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="section-title">تواصل معنا</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>+249913678918</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>الخرطوم بحري - حي السودان</span>
+                        </div>
+                    </div>
+                    <button class="whatsapp-btn" onclick="openWhatsApp()">
+                        <i class="fab fa-whatsapp"></i>
+                        تواصل عبر واتساب
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- الفوتر -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 سند للأكسسوارات - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <!-- زر واتساب العائم -->
+    <a href="https://wa.me/249913678918" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
