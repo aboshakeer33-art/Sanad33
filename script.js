@@ -344,3 +344,16 @@ function toggleMenu() {
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeGallery();
 });
+// دالة تلقائية تضيف المسار الصحيح للصور
+function fixImagePaths() {
+    const baseUrl = 'https://yourdomain.com/'; // غيره للرابط بتاعك
+    const images = document.querySelectorAll('img[data-src]');
+    
+    images.forEach(img => {
+        const src = img.getAttribute('data-src');
+        img.src = baseUrl + src;
+    });
+}
+
+// في الـ HTML استخدم:
+// <img data-src="images/product.jpg" alt="منتج">
