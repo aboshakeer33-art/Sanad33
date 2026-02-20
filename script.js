@@ -1,6 +1,11 @@
+// ===== إعدادات GitHub =====
+const GITHUB_USERNAME = 'aboshakeer33-art';
+const REPO_NAME = 'Sanad33';
+const BRANCH = 'main';
+const IMAGE_BASE_URL = `https://raw.githubusercontent.com/${GITHUB_USERNAME}/${REPO_NAME}/${BRANCH}/images/`;
+
 // ===== جميع أسماء الصور =====
 const imageFiles = [
-    // الدفعة الأولى
     "Screenshot_20260218-125024_Files من Google.png",
     "Screenshot_20260218-125048_Files من Google.png",
     "Screenshot_20260218-125102_Files من Google.png",
@@ -21,7 +26,6 @@ const imageFiles = [
     "Screenshot_20260218-125418_Files من Google.png",
     "Screenshot_20260218-125428_Files من Google.png",
     "Screenshot_20260218-125438_Files من Google.png",
-    // الدفعة الثانية
     "Screenshot_20260218-125448_Files من Google.png",
     "Screenshot_20260218-125500_Files من Google.png",
     "Screenshot_20260218-125509_Files من Google.png",
@@ -40,7 +44,6 @@ const imageFiles = [
     "Screenshot_20260218-125947_Files من Google.png",
     "Screenshot_20260218-130017_Files من Google.png",
     "Screenshot_20260218-130048_Files من Google.png",
-    // الدفعة الثالثة (صور)
     "Screenshot_20260218-200700_صور Google.png",
     "Screenshot_20260218-201538_صور Google.png",
     "Screenshot_20260218-201825_صور Google.png",
@@ -67,7 +70,6 @@ const imageFiles = [
     "Screenshot_20260218-202453_صور Google.png",
     "Screenshot_20260218-202506_صور Google.png",
     "Screenshot_20260218-202648_صور Google.png",
-    // الدفعة الرابعة
     "Screenshot_20260218-202731_صور Google.png",
     "Screenshot_20260218-202805_صور Google.png",
     "Screenshot_20260218-202820_صور Google.png",
@@ -87,7 +89,7 @@ const categories = {
     kawaleen_khashab: { name: "كوالين أبواب خشب دفن", count: 0 }
 };
 
-// ===== توزيع الصور على التصنيفات (عدل حسب رغبتك) =====
+// ===== توزيع الصور على التصنيفات =====
 const distribution = [
     { cat: "mafsal", count: 12 },
     { cat: "masak_turkey", count: 12 },
@@ -112,7 +114,7 @@ distribution.forEach(group => {
             description: `منتج عالي الجودة من قسم ${catInfo.name}`,
             category: catKey,
             categoryName: catInfo.name,
-            image: `images/${imageFiles[imageIndex]}`,
+            image: IMAGE_BASE_URL + encodeURIComponent(imageFiles[imageIndex]),
             isNew: i < 2,
             isFavorite: i === 0
         });
@@ -162,8 +164,8 @@ function renderProducts() {
     
     grid.innerHTML = items.map(p => `
         <div class="product-card" data-id="${p.id}" style="background: #12121a; border-radius: 16px; overflow: hidden; border: 1px solid rgba(212,175,55,0.2); opacity: 0; transform: translateY(20px); transition: all 0.5s ease;">
-            <div onclick="openGallery('${encodeURIComponent(p.image)}', '${p.name}')" style="position: relative; height: 250px; overflow: hidden; cursor: pointer; background: linear-gradient(135deg, #1a1a2e 0%, #0f0f23 100%);">
-                <img src="${p.image}" alt="${p.name}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\\'display:flex;align-items:center;justify-content:center;height:100%;color:#d4af37;flex-direction:column;\\'><i class=\\'fas fa-image\\' style=\\'font-size:3rem;margin-bottom:10px;\\'></i><span>${p.name}</span></div>'">
+            <div onclick="openGallery('${p.image}', '${p.name}')" style="position: relative; height: 250px; overflow: hidden; cursor: pointer; background: linear-gradient(135deg, #1a1a2e 0%, #0f0f23 100%);">
+                <img src="${p.image}" alt="${p.name}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
                 
                 ${p.isNew ? '<span style="position: absolute; top: 15px; right: 15px; background: linear-gradient(135deg, #d4af37, #b8941f); color: #000; padding: 6px 18px; border-radius: 25px; font-size: 0.85rem; font-weight: bold; box-shadow: 0 4px 15px rgba(212,175,55,0.3);"><i class="fas fa-star" style="margin-left: 5px;"></i>جديد</span>' : ''}
                 
@@ -239,9 +241,7 @@ function renderCategories() {
 }
 
 // ===== فتح معرض الصور =====
-function openGallery(encodedSrc, name) {
-    const src = decodeURIComponent(encodedSrc);
-    
+function openGallery(imageUrl, name) {
     const modal = document.createElement('div');
     modal.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 9999; display: flex; align-items: center; justify-content: center; padding: 20px; animation: fadeIn 0.3s;';
     
@@ -253,12 +253,7 @@ function openGallery(encodedSrc, name) {
                 <i class="fas fa-times"></i>
             </button>
             
-            <img src="${src}" alt="${name}" style="max-width: 100%; max-height: 80vh; border-radius: 15px; border: 3px solid #d4af37; box-shadow: 0 25px 60px rgba(0,0,0,0.8);" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-            
-            <div style="display: none; width: 400px; height: 300px; background: linear-gradient(135deg, #1a1a2e, #0f0f23); border-radius: 15px; align-items: center; justify-content: center; flex-direction: column; color: #d4af37; border: 2px solid rgba(212,175,55,0.3);">
-                <i class="fas fa-image" style="font-size: 4rem; margin-bottom: 15px;"></i>
-                <span>الصورة غير متوفرة</span>
-            </div>
+            <img src="${imageUrl}" alt="${name}" style="max-width: 100%; max-height: 80vh; border-radius: 15px; border: 3px solid #d4af37; box-shadow: 0 25px 60px rgba(0,0,0,0.8);">
             
             <p style="color: #d4af37; margin-top: 20px; font-size: 1.4rem; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">${name}</p>
             
@@ -322,8 +317,12 @@ function filterProducts(cat) {
 
 // ===== تغيير صفحة =====
 function changePage(dir) {
-    const total = Math.ceil(products.length / perPage);
+    const filtered = currentFilter === 'all' 
+        ? products 
+        : products.filter(p => p.category === currentFilter);
+    const total = Math.ceil(filtered.length / perPage);
     const newPage = currentPage + dir;
+    
     if (newPage >= 1 && newPage <= total) {
         currentPage = newPage;
         renderProducts();
@@ -331,39 +330,26 @@ function changePage(dir) {
     }
 }
 
-// ===== باقي الدوال =====
-function searchProducts() { currentPage = 1; renderProducts(); }
-function sortProducts() { renderProducts(); }
-function openWhatsApp() { window.open('https://wa.me/249913678918', '_blank'); }
+// ===== دوال مساعدة =====
+function openWhatsApp() { 
+    window.open('https://wa.me/249913678918', '_blank'); 
+}
+
 function toggleMenu() { 
     const sidebar = document.getElementById('sidebar');
     if (sidebar) sidebar.classList.toggle('active');
+}
+
+function toggleCart() {
+    alert('🛒 سلة التسوق قريباً!');
+}
+
+function scrollToProducts() {
+    const section = document.getElementById('products');
+    if (section) section.scrollIntoView({ behavior: 'smooth' });
 }
 
 // ===== إغلاق بالـ ESC =====
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeGallery();
 });
-// دالة تلقائية تضيف المسار الصحيح للصور
-function fixImagePaths() {
-    const baseUrl = 'https://yourdomain.com/'; // غيره للرابط بتاعك
-    const images = document.querySelectorAll('img[data-src]');
-    
-    images.forEach(img => {
-        const src = img.getAttribute('data-src');
-        img.src = baseUrl + src;
-    });
-}
-
-// في الـ HTML استخدم:
-// <img data-src="images/product.jpg" alt="منتج">
-// ضيف ده في ملف script.js
-const IMAGE_BASE_URL = 'https://raw.githubusercontent.com/اسمك/المستودع/main/';
-
-function loadImage(imgName) {
-    return IMAGE_BASE_URL + imgName;
-}
-
-// استخدمه كده:
-// <img id="myImg">
-// document.getElementById('myImg').src = loadImage('images/product1.jpg');
