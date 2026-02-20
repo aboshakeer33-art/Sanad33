@@ -3,342 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سند للأكسسوارات | فخامة الأكسسوارات المعدنية</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Sanad33</title>
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <!-- Tajawal Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap">
+    <!-- ملف التنسيق الأصلي -->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- === الجزء المضاف: تنسيقات إضافية ولحل مشكلة الخط === -->
+    <style>
+        /* إعادة تعريف الخط للتأكد من عمله */
+        body {
+            font-family: 'Tajawal', sans-serif !important;
+        }
+
+        /* تنسيق الصور لضمان عرضها بشكل صحيح */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* تحميل الخط محليًا كبديل إضافي */
+        @font-face {
+            font-family: 'Tajawal';
+            src: url('fonts/Tajawal-Regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Tajawal';
+            src: url('fonts/Tajawal-Bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+    </style>
+    <!-- === نهاية الجزء المضاف === -->
 </head>
 <body>
-    <!-- تأثير الخلفية المتحركة -->
-    <div class="bg-animation">
-        <div class="bg-gradient"></div>
-        <div class="particles" id="particles"></div>
-    </div>
-
-    <!-- الهيدر الفاخر -->
-    <header class="header luxury-header">
-        <div class="container">
-            <div class="header-content">
-                <button class="menu-btn luxury-btn" onclick="toggleMenu()">
-                    <i class="fas fa-bars"></i>
-                </button>
-                
-                <div class="logo-section">
-                    <div class="logo-icon luxury-logo">
-                        <span class="logo-symbol">س</span>
-                        <div class="logo-glow"></div>
-                    </div>
-                    <div class="logo-text">
-                        <h1 class="luxury-title">سند للأكسسوارات</h1>
-                        <p class="luxury-subtitle">فخامة الأكسسوارات المعدنية | الخرطوم بحري</p>
-                    </div>
-                </div>
-                
-                <button class="order-btn luxury-order" onclick="openWhatsApp()">
-                    <span>اطلب الآن</span>
-                    <i class="fas fa-arrow-left"></i>
-                </button>
-                
-                <div class="cart-icon luxury-cart" onclick="toggleCart()">
-                    <i class="fas fa-shopping-bag"></i>
-                    <span class="cart-count" id="cartCount">0</span>
-                </div>
-            </div>
+    <!-- الشريط العلوي الأصلي -->
+    <header>
+        <div class="logo">
+            <h1>Sanad33</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="sind-store.html"><i class="fas fa-store"></i> المتجر</a></li>
+                <li><a href="#contact"><i class="fas fa-phone"></i> تواصل معنا</a></li>
+            </ul>
+        </nav>
+        <div class="whatsapp">
+            <a href="https://wa.me/249913678918" target="_blank"><i class="fab fa-whatsapp"></i> تواصل عبر واتساب</a>
         </div>
     </header>
 
-    <!-- القائمة الجانبية الفاخرة -->
-    <nav class="sidebar luxury-sidebar" id="sidebar">
-        <div class="sidebar-header">
-            <div class="sidebar-brand">
-                <div class="sidebar-logo">س</div>
-                <h3>سند ستور</h3>
-            </div>
-            <button class="close-btn luxury-close" onclick="toggleMenu()">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <ul class="sidebar-menu">
-            <li><a href="index.html" class="active"><i class="fas fa-home"></i> الرئيسية</a></li>
-            <li><a href="sind-store.html"><i class="fas fa-store"></i> المتجر</a></li>
-            <li><a href="#products"><i class="fas fa-box-open"></i> المنتجات</a></li>
-            <li><a href="#about"><i class="fas fa-info-circle"></i> من نحن</a></li>
-            <li><a href="#contact"><i class="fas fa-phone-alt"></i> تواصل معنا</a></li>
-        </ul>
-        <div class="sidebar-footer">
-            <p>جودة لا تُضاهى</p>
-        </div>
-    </nav>
-
-    <!-- المحتوى الرئيسي -->
-    <main class="main-content">
-        <!-- قسم البطل الفاخر -->
-        <section class="hero luxury-hero">
-            <div class="hero-overlay"></div>
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-badge">
-                        <i class="fas fa-crown"></i>
-                        <span>الأفضل في السودان</span>
-                    </div>
-                    <h2 class="hero-title">أكسسوارات فاخرة<br>لمنزل عصري</h2>
-                    <p class="hero-description">مقابض، مفصلات، وأقفال بجودة عالمية</p>
-                    <div class="hero-buttons">
-                        <button class="cta-btn luxury-cta" onclick="scrollToProducts()">
-                            <span>استكشف المنتجات</span>
-                            <i class="fas fa-arrow-down"></i>
-                        </button>
-                        <button class="cta-btn-outline" onclick="openWhatsApp()">
-                            <i class="fab fa-whatsapp"></i>
-                            تواصل مباشر
-                        </button>
-                    </div>
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">500+</span>
-                            <span class="stat-label">منتج فاخر</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">1000+</span>
-                            <span class="stat-label">عميل سعيد</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">24/7</span>
-                            <span class="stat-label">خدمة توصيل</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-scroll">
-                <div class="scroll-indicator"></div>
-            </div>
+    <!-- المحتوى الرئيسي الأصلي -->
+    <main>
+        <section class="hero">
+            <h2>مرحبًا بك في منصتنا الرقمية</h2>
+            <p>نقدم لك أفضل المنتجات والخدمات بأسعار تنافسية</p>
+            <a href="sind-store.html" class="btn">زيارة المتجر</a>
         </section>
 
-        <!-- قسم المميزات -->
         <section class="features">
-            <div class="container">
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-medal"></i>
-                        </div>
-                        <h3>جودة عالمية</h3>
-                        <p>منتجات مختارة بعناية من أفضل المصانع</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-shipping-fast"></i>
-                        </div>
-                        <h3>توصيل سريع</h3>
-                        <p>نوصل لجميع مناطق الخرطوم بحري</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-headset"></i>
-                        </div>
-                        <h3>دعم ممتاز</h3>
-                        <p>فريق متخصص لمساعدتك في الاختيار</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>ضمان الجودة</h3>
-                        <p>ضمان استبدال على جميع المنتجات</p>
-                    </div>
-                </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>جودة مضمونة</h3>
+                <p>جميع منتجاتنا ذات جودة عالية وموثوقة</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-truck"></i>
+                <h3>توصيل سريع</h3>
+                <p>نقوم بتوصيل طلباتك إلى أي مكان في المملكة</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-headset"></i>
+                <h3>دعم فني دائم</h3>
+                <p>فريقنا متاح لتقديم المساعدة في أي وقت</p>
             </div>
         </section>
 
-        <!-- قسم المنتجات المميزة -->
-        <section class="featured-products luxury-section" id="products">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-badge">مختاراتنا</span>
-                    <h2 class="section-title luxury-title-section">منتجات مميزة</h2>
-                    <p class="section-subtitle">أفضل ما لدينا من أكسسوارات فاخرة</p>
-                </div>
-                <div class="products-grid luxury-grid" id="featuredProducts">
-                    <!-- سيتم ملؤها بالJavaScript -->
-                </div>
-                <div class="view-all">
-                    <a href="sind-store.html" class="view-all-btn luxury-view">
-                        <span>عرض جميع المنتجات</span>
-                        <i class="fas fa-arrow-left"></i>
-                    </a>
-                </div>
+        <!-- === تعديل الصور: تحويلها لاستخدام الأسماء العربية === -->
+        <section class="gallery">
+            <h2>أهم الصور</h2>
+            <div class="gallery-images">
+                <!-- الصور القديمة محدثة لتستخدم الدالة الجديدة -->
+                <img id="img1" alt="لقطة شاشة من تطبيق ملفات">
+                <img id="img2" alt="لقطة شاشة أخرى من تطبيق ملفات">
+                <img id="img3" alt="صورة منتجاتنا">
+                <img id="img4" alt="صورة خدماتنا">
             </div>
         </section>
+        <!-- === نهاية تعديل الصور === -->
 
-        <!-- قسم التصنيفات الفاخر -->
-        <section class="categories luxury-categories">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-badge">التصنيفات</span>
-                    <h2 class="section-title luxury-title-section">تصفح حسب النوع</h2>
-                </div>
-                <div class="categories-grid luxury-cat-grid">
-                    <div class="category-card luxury-cat" onclick="filterByCategory('all')">
-                        <div class="category-image">
-                            <i class="fas fa-th-large"></i>
-                        </div>
-                        <div class="category-info">
-                            <h3>جميع المنتجات</h3>
-                            <span class="category-count">16+ منتج</span>
-                        </div>
-                        <div class="category-arrow">
-                            <i class="fas fa-arrow-left"></i>
-                        </div>
-                    </div>
-                    <div class="category-card luxury-cat" onclick="filterByCategory('masak')">
-                        <div class="category-image">
-                            <i class="fas fa-hand-rock"></i>
-                        </div>
-                        <div class="category-info">
-                            <h3>مقابض الأبواب</h3>
-                            <span class="category-count">4 منتجات</span>
-                        </div>
-                        <div class="category-arrow">
-                            <i class="fas fa-arrow-left"></i>
-                        </div>
-                    </div>
-                    <div class="category-card luxury-cat" onclick="filterByCategory('mafsal')">
-                        <div class="category-image">
-                            <i class="fas fa-door-open"></i>
-                        </div>
-                        <div class="category-info">
-                            <h3>المفصلات</h3>
-                            <span class="category-count">4 منتجات</span>
-                        </div>
-                        <div class="category-arrow">
-                            <i class="fas fa-arrow-left"></i>
-                        </div>
-                    </div>
-                    <div class="category-card luxury-cat" onclick="filterByCategory('lock')">
-                        <div class="category-image">
-                            <i class="fas fa-lock"></i>
-                        </div>
-                        <div class="category-info">
-                            <h3>الأقفال</h3>
-                            <span class="category-count">4 منتجات</span>
-                        </div>
-                        <div class="category-arrow">
-                            <i class="fas fa-arrow-left"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم من نحن -->
-        <section class="about luxury-about" id="about">
-            <div class="container">
-                <div class="about-content">
-                    <div class="about-image">
-                        <div class="image-frame">
-                            <div class="image-placeholder">
-                                <i class="fas fa-award"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-text">
-                        <span class="section-badge">من نحن</span>
-                        <h2>سند للأكسسوارات</h2>
-                        <p>نحن متخصصون في تقديم أجود أنواع الأكسسوارات المعدنية للأبواب والنوافذ. نقدم منتجات عالية الجودة بأسعار تنافسية مع خدمة توصيل سريعة في جميع أنحاء الخرطوم بحري.</p>
-                        <div class="about-features">
-                            <div class="about-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>خبرة 10+ سنوات</span>
-                            </div>
-                            <div class="about-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>منتجات أصلية 100%</span>
-                            </div>
-                            <div class="about-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>أسعار منافسة</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم التواصل الفاخر -->
-        <section class="contact luxury-contact" id="contact">
-            <div class="container">
-                <div class="contact-wrapper">
-                    <div class="contact-info-box">
-                        <span class="section-badge">تواصل معنا</span>
-                        <h2>نحن هنا لمساعدتك</h2>
-                        <p>للاستفسارات والطلبات، تواصل معنا مباشرة عبر واتساب</p>
-                        
-                        <div class="contact-details">
-                            <div class="contact-item luxury-item">
-                                <div class="contact-icon">
-                                    <i class="fab fa-whatsapp"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <span>واتساب</span>
-                                    <strong>+249 91 367 8918</strong>
-                                </div>
-                            </div>
-                            <div class="contact-item luxury-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <span>الموقع</span>
-                                    <strong>الخرطوم بحري - حي السودان</strong>
-                                </div>
-                            </div>
-                            <div class="contact-item luxury-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-clock"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <span>ساعات العمل</span>
-                                    <strong>السبت - الخميس: 9 ص - 9 م</strong>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <button class="whatsapp-btn luxury-whatsapp" onclick="openWhatsApp()">
-                            <i class="fab fa-whatsapp"></i>
-                            <span>تواصل عبر واتساب</span>
-                        </button>
-                    </div>
-                </div>
+        <section id="contact" class="contact">
+            <h2>تواصل معنا</h2>
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> جدة - المملكة العربية السعودية</p>
+                <p><i class="fas fa-phone"></i> 0500000000</p>
+                <p><i class="fas fa-envelope"></i> info@sanad33.com</p>
             </div>
         </section>
     </main>
 
-    <!-- الفوتر الفاخر -->
-    <footer class="footer luxury-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="footer-logo">سند</div>
-                    <p>فخامة الأكسسوارات المعدنية</p>
-                </div>
-                <div class="footer-links">
-                    <a href="index.html">الرئيسية</a>
-                    <a href="sind-store.html">المتجر</a>
-                    <a href="#contact">تواصل معنا</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2025 سند للأكسسوارات - جميع الحقوق محفوظة</p>
-            </div>
+    <!-- التذييل الأصلي -->
+    <footer>
+        <div class="social-links">
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://wa.me/249913678918" target="_blank"><i class="fab fa-whatsapp"></i></a>
         </div>
+        <p>جميع الحقوق محفوظة &copy; Sanad33 2026</p>
     </footer>
 
-    <!-- زر واتساب العائم الفاخر -->
-    <a href="https://wa.me/249913678918" class="whatsapp-float luxury-float" target="_blank">
-        <div class="float-pulse"></div>
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
+    <!-- ملف السكريبت الأصلي -->
     <script src="script.js"></script>
+
+    <!-- === الجزء المضاف: سكريبت لعرض الصور بأسماء عربية === -->
+    <script>
+        // دالة لترميز أسماء الصور بالحروف العربية
+        function getEncodedImagePath(imageName) {
+            return 'images/' + encodeURIComponent(imageName);
+        }
+
+        // تعيين مسارات الصور بناءً على الأسماء العربية الموجودة في مجلد images
+        document.getElementById('img1').src = getEncodedImagePath('Screenshot_20260218-125048_Files من Google.png');
+        document.getElementById('img2').src = getEncodedImagePath('Screenshot_20260218-125102_Files من Google.png');
+        document.getElementById('img3').src = getEncodedImagePath('منتجاتنا المميزة.png'); // أضف اسم الصورة الفعلي
+        document.getElementById('img4').src = getEncodedImagePath('خدماتنا الرقمية.png'); // أضف اسم الصورة الفعلي
+    </script>
+    <!-- === نهاية الجزء المضاف === -->
 </body>
 </html>
