@@ -1,8 +1,5 @@
-// ===== إعدادات GitHub =====
-const GITHUB_USERNAME = 'aboshakeer33-art';
-const REPO_NAME = 'Sanad33';
-const BRANCH = 'main';
-const IMAGE_BASE_URL = `https://raw.githubusercontent.com/${GITHUB_USERNAME}/${REPO_NAME}/${BRANCH}/images/`;
+// ===== إعدادات GitHub Pages =====
+const BASE_URL = 'https://aboshakeer33-art.github.io/Sanad33/images/';
 
 // ===== جميع أسماء الصور =====
 const imageFiles = [
@@ -89,7 +86,7 @@ const categories = {
     kawaleen_khashab: { name: "كوالين أبواب خشب دفن", count: 0 }
 };
 
-// ===== توزيع الصور على التصنيفات =====
+// ===== توزيع الصور =====
 const distribution = [
     { cat: "mafsal", count: 12 },
     { cat: "masak_turkey", count: 12 },
@@ -98,6 +95,11 @@ const distribution = [
     { cat: "cylinder_keys", count: 12 },
     { cat: "kawaleen_khashab", count: 10 }
 ];
+
+// ===== دالة بناء رابط الصورة =====
+function getImageUrl(filename) {
+    return BASE_URL + encodeURIComponent(filename);
+}
 
 // ===== إنشاء بيانات المنتجات =====
 let products = [];
@@ -114,7 +116,7 @@ distribution.forEach(group => {
             description: `منتج عالي الجودة من قسم ${catInfo.name}`,
             category: catKey,
             categoryName: catInfo.name,
-            image: IMAGE_BASE_URL + encodeURIComponent(imageFiles[imageIndex]),
+            image: getImageUrl(imageFiles[imageIndex]),
             isNew: i < 2,
             isFavorite: i === 0
         });
@@ -131,7 +133,6 @@ const perPage = 8;
 
 // ===== التحميل =====
 document.addEventListener('DOMContentLoaded', function() {
-    console.log(`✅ تم تحميل ${products.length} منتج`);
     renderProducts();
     renderCategories();
 });
