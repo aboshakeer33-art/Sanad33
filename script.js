@@ -5,7 +5,8 @@ const products = [
         name: "مقبض باب خشبي فاخر",
         description: "مقبض عالي الجودة للأبواب الخشبية بتصميم كلاسيكي أنيق",
         category: "masak",
-        image: "images/products/masak1.jpg",
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400",
+        fallback: "https://via.placeholder.com/400x300/1a1a2e/d4af37?text=مقبض+خشبي",
         isNew: true,
         isFavorite: false
     },
@@ -14,7 +15,8 @@ const products = [
         name: "مقبض باب معدني عصري",
         description: "مقبض معدني مقاوم للصدأ بتصميم عصري",
         category: "masak",
-        image: "images/products/masak2.jpg",
+        image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400",
+        fallback: "https://via.placeholder.com/400x300/1a1a2e/d4af37?text=مقبض+معدني",
         isNew: false,
         isFavorite: false
     },
@@ -23,7 +25,8 @@ const products = [
         name: "مقبض درج كلاسيك",
         description: "مقبض أنيق للأدراج والدواليب بجودة عالية",
         category: "masak",
-        image: "images/products/masak3.jpg",
+        image: "https://images.unsplash.com/photo-1558618047-f4b511d0e435?w=400",
+        fallback: "https://via.placeholder.com/400x300/1a1a2e/d4af37?text=مقبض+درج",
         isNew: false,
         isFavorite: true
     },
@@ -32,7 +35,8 @@ const products = [
         name: "مفصلة باب خشبي فاخرة",
         description: "مفصلة عالية الجودة للأبواب الخشبية الثقيلة",
         category: "mafsal",
-        image: "images/products/mafsal1.jpg",
+        image: "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400",
+        fallback: "https://via.placeholder.com/400x300/1a1a2e/d4af37?text=مفصلة",
         isNew: true,
         isFavorite: false
     },
@@ -41,7 +45,8 @@ const products = [
         name: "مفصلة معدنية ثقيلة",
         description: "مفصلة قوية تحمل الأبواب الثقيلة بسهولة",
         category: "mafsal",
-        image: "images/products/mafsal2.jpg",
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400",
+        fallback: "https://via.placeholder.com/400x300/1a1a2e/d4af37?text=مفصلة+معدنية",
         isNew: false,
         isFavorite: false
     },
@@ -50,7 +55,8 @@ const products = [
         name: "مفصلة ذاتية الإغلاق",
         description: "مفصلة ذاتية الإغلاق للأبواب مع خاصية التهدئة",
         category: "mafsal",
-        image: "images/products/mafsal3.jpg",
+        image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400",
+        fallback: "https://via.placeholder.com/400x300/1a1a2e/d4af37?text=مفصلة+ذاتية",
         isNew: true,
         isFavorite: true
     },
@@ -59,7 +65,8 @@ const products = [
         name: "قفل باب أمان",
         description: "قفل أمان عالي الجودة مع مفاتيح احتياطية",
         category: "lock",
-        image: "images/products/lock1.jpg",
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400",
+        fallback: "https://via.placeholder.com/400x300/1a1a2e/d4af37?text=قفل+أمان",
         isNew: false,
         isFavorite: false
     },
@@ -68,7 +75,8 @@ const products = [
         name: "قفل درج صغير",
         description: "قفل مخصص للأدراج والدواليب بمفتاح صغير",
         category: "lock",
-        image: "images/products/lock2.jpg",
+        image: "https://images.unsplash.com/photo-1558618047-f4b511d0e435?w=400",
+        fallback: "https://via.placeholder.com/400x300/1a1a2e/d4af37?text=قفل+درج",
         isNew: false,
         isFavorite: false
     },
@@ -77,7 +85,8 @@ const products = [
         name: "قفل إلكتروني ذكي",
         description: "قفل إلكتروني حديث بالبصمة وكلمة المرور",
         category: "lock",
-        image: "images/products/lock3.jpg",
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400",
+        fallback: "https://via.placeholder.com/400x300/1a1a2e/d4af37?text=قفل+ذكي",
         isNew: true,
         isFavorite: true
     },
@@ -86,7 +95,8 @@ const products = [
         name: "مزلاج باب أمان",
         description: "مزلاج أمان إضافي للأبواب الداخلية والخارجية",
         category: "other",
-        image: "images/products/other1.jpg",
+        image: "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400",
+        fallback: "https://via.placeholder.com/400x300/1a1a2e/d4af37?text=مزلاج",
         isNew: false,
         isFavorite: false
     },
@@ -95,7 +105,8 @@ const products = [
         name: "ستاند باب معدني",
         description: "ستاند لمنع إغلاق الباب بقوة الرياح",
         category: "other",
-        image: "images/products/other2.jpg",
+        image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400",
+        fallback: "https://via.placeholder.com/400x300/1a1a2e/d4af37?text=ستاند",
         isNew: false,
         isFavorite: false
     },
@@ -104,7 +115,8 @@ const products = [
         name: "نظارة باب عريضة",
         description: "نظارة للأبواب الخارجية بزاوية رؤية واسعة",
         category: "other",
-        image: "images/products/other3.jpg",
+        image: "https://images.unsplash.com/photo-1558618047-f4b511d0e435?w=400",
+        fallback: "https://via.placeholder.com/400x300/1a1a2e/d4af37?text=نظارة",
         isNew: false,
         isFavorite: false
     },
@@ -113,16 +125,18 @@ const products = [
         name: "مقبض باب زجاجي فاخر",
         description: "مقبض مخصص للأبواب الزجاجية بتصميم مميز",
         category: "masak",
-        image: "images/products/masak4.jpg",
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400",
+        fallback: "https://via.placeholder.com/400x300/1a1a2e/d4af37?text=مقبض+زجاجي",
         isNew: true,
         isFavorite: false
     },
     {
         id: 14,
-        name: "مفصلة زاوية م concealed",
+        name: "مفصلة زاوية مخفية",
         description: "مفصلة زاوية مخفية للأبواب الثقيلة",
         category: "mafsal",
-        image: "images/products/mafsal4.jpg",
+        image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400",
+        fallback: "https://via.placeholder.com/400x300/1a1a2e/d4af37?text=مفصلة+مخفية",
         isNew: false,
         isFavorite: false
     },
@@ -131,7 +145,8 @@ const products = [
         name: "قفل خزنة إلكتروني",
         description: "قفل أمان إلكتروني للخزنات والصناديق",
         category: "lock",
-        image: "images/products/lock4.jpg",
+        image: "https://images.unsplash.com/photo-1558618047-f4b511d0e435?w=400",
+        fallback: "https://via.placeholder.com/400x300/1a1a2e/d4af37?text=قفل+خزنة",
         isNew: false,
         isFavorite: true
     },
@@ -140,7 +155,8 @@ const products = [
         name: "سلسلة باب أمان",
         description: "سلسلة أمان للأبواب مع قفل صغير",
         category: "other",
-        image: "images/products/other4.jpg",
+        image: "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400",
+        fallback: "https://via.placeholder.com/400x300/1a1a2e/d4af37?text=سلسلة",
         isNew: false,
         isFavorite: false
     }
@@ -160,7 +176,24 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCartCount();
     initParticles();
     initScrollEffects();
+    initImageHandlers();
 });
+
+// ===== معالجة الصور =====
+function initImageHandlers() {
+    // معالجة أخطاء الصور تلقائياً
+    document.addEventListener('error', function(e) {
+        if (e.target.tagName === 'IMG') {
+            const productId = e.target.closest('.product-card')?.dataset.id;
+            if (productId) {
+                const product = products.find(p => p.id == productId);
+                if (product && product.fallback) {
+                    e.target.src = product.fallback;
+                }
+            }
+        }
+    }, true);
+}
 
 // ===== تأثير الجسيمات =====
 function initParticles() {
@@ -208,6 +241,16 @@ function renderFeaturedProducts() {
     const featured = products.filter(p => p.isNew || p.isFavorite).slice(0, 4);
     
     container.innerHTML = featured.map(product => createLuxuryProductCard(product)).join('');
+    
+    // تأخير بسيط عشان الأنيميشن
+    setTimeout(() => {
+        container.querySelectorAll('.product-card').forEach((card, index) => {
+            setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, index * 100);
+        });
+    }, 100);
 }
 
 // ===== عرض المنتجات (صفحة المتجر) =====
@@ -271,13 +314,16 @@ function renderProducts() {
 // ===== إنشاء بطاقة المنتج الفاخرة (بدون سعر) =====
 function createLuxuryProductCard(product) {
     return `
-        <div class="product-card" data-id="${product.id}">
+        <div class="product-card" data-id="${product.id}" style="opacity: 0; transform: translateY(20px); transition: all 0.5s ease;">
             <div class="product-image">
-                <img src="${product.image}" alt="${product.name}" onerror="this.src='https://via.placeholder.com/400x300/1a1a2e/d4af37?text=${encodeURIComponent(product.name)}'">
+                <img src="${product.image}" 
+                     alt="${product.name}" 
+                     onerror="this.src='${product.fallback}'"
+                     loading="lazy">
                 ${product.isNew ? '<div class="badge"><i class="fas fa-star"></i> جديد</div>' : ''}
                 <div class="product-overlay">
                     <button class="quick-view" onclick="showProductDetails(${product.id})">
-                        عرض التفاصيل
+                        <i class="fas fa-eye"></i> عرض التفاصيل
                     </button>
                 </div>
             </div>
@@ -285,13 +331,13 @@ function createLuxuryProductCard(product) {
                 <h3 class="product-title">${product.name}</h3>
                 <p class="product-description">${product.description}</p>
                 <div class="product-request">
-                    <button class="action-btn ${product.isFavorite ? 'active' : ''}" onclick="toggleFavorite(${product.id})">
+                    <button class="action-btn ${product.isFavorite ? 'active' : ''}" onclick="toggleFavorite(${product.id})" title="المفضلة">
                         <i class="fas fa-heart"></i>
                     </button>
-                    <button class="action-btn" onclick="shareProduct(${product.id})">
+                    <button class="action-btn" onclick="shareProduct(${product.id})" title="مشاركة">
                         <i class="fas fa-share-alt"></i>
                     </button>
-                    <button class="request-btn" onclick="requestPrice(${product.id})">
+                    <button class="request-btn shine" onclick="requestPrice(${product.id})">
                         <span>اطلب السعر</span>
                         <i class="fab fa-whatsapp"></i>
                     </button>
@@ -316,21 +362,29 @@ function showProductDetails(productId) {
                 <i class="fas fa-times"></i>
             </button>
             <div class="modal-image">
-                <img src="${product.image}" alt="${product.name}" onerror="this.src='https://via.placeholder.com/500x400/1a1a2e/d4af37?text=${encodeURIComponent(product.name)}'">
+                <img src="${product.image}" 
+                     alt="${product.name}" 
+                     onerror="this.src='${product.fallback}'">
             </div>
             <div class="modal-info">
-                ${product.isNew ? '<span class="modal-badge">جديد</span>' : ''}
+                ${product.isNew ? '<span class="modal-badge"><i class="fas fa-star"></i> منتج جديد</span>' : ''}
                 <h2>${product.name}</h2>
                 <p class="modal-description">${product.description}</p>
                 <div class="modal-features">
-                    <div class="feature-tag"><i class="fas fa-check"></i> جودة عالية</div>
-                    <div class="feature-tag"><i class="fas fa-check"></i> ضمان سنة</div>
-                    <div class="feature-tag"><i class="fas fa-check"></i> توصيل سريع</div>
+                    <div class="feature-tag"><i class="fas fa-check-circle"></i> جودة عالية</div>
+                    <div class="feature-tag"><i class="fas fa-check-circle"></i> ضمان سنة</div>
+                    <div class="feature-tag"><i class="fas fa-check-circle"></i> توصيل سريع</div>
+                    <div class="feature-tag"><i class="fas fa-check-circle"></i> تركيب مجاني</div>
                 </div>
-                <button class="modal-cta" onclick="requestPrice(${product.id}); closeModal();">
-                    <i class="fab fa-whatsapp"></i>
-                    اطلب السعر الآن
-                </button>
+                <div class="modal-actions">
+                    <button class="modal-cta" onclick="requestPrice(${product.id}); closeModal();">
+                        <i class="fab fa-whatsapp"></i>
+                        اطلب السعر الآن
+                    </button>
+                    <button class="modal-favorite ${product.isFavorite ? 'active' : ''}" onclick="toggleFavorite(${product.id}); this.classList.toggle('active')">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                </div>
             </div>
         </div>
     `;
@@ -356,11 +410,247 @@ function closeModal() {
     }
 }
 
-// ===== طلب السعر (بدل الطلب المباشر) =====
+// ===== طلب السعر =====
 function requestPrice(productId) {
     const product = products.find(p => p.id === productId);
     if (product) {
-        const message = `مرحباً سند ستور،\n\n` +
-                       `أرغب في الاستفسار عن سعر المنتج التالي:\n\n` +
-                       `🏷️ *المنتج:* ${product.name}\n` +
-                      
+        const message = `مرحباً سند ستور 👋
+
+أرغب في الاستفسار عن سعر المنتج التالي:
+
+🏷️ *المنتج:* ${product.name}
+📝 *الوصف:* ${product.description}
+🔢 *رقم المنتج:* #${product.id}
+
+يرجى إرسال السعر والتوفر`;
+
+        const whatsappUrl = `https://wa.me/249913678918?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+        
+        // إضافة للسلة (للإحصاء)
+        addToCart(product);
+    }
+}
+
+// ===== ترتيب المنتجات =====
+function sortProductsList(list, sortValue) {
+    const sorted = [...list];
+    switch(sortValue) {
+        case 'newest':
+            return sorted.sort((a, b) => b.id - a.id);
+        case 'popular':
+            return sorted.sort((a, b) => (b.isFavorite - a.isFavorite));
+        default:
+            return sorted.sort((a, b) => a.name.localeCompare(b.name, 'ar'));
+    }
+}
+
+// ===== البحث =====
+function searchProducts() {
+    currentPage = 1;
+    renderProducts();
+}
+
+// ===== ترتيب =====
+function sortProducts() {
+    renderProducts();
+}
+
+// ===== تصفية =====
+function filterProducts(category) {
+    currentFilter = category;
+    currentPage = 1;
+    
+    // تحديث الأزرار النشطة
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    if (event && event.target) {
+        event.target.classList.add('active');
+    }
+    
+    renderProducts();
+}
+
+// ===== تغيير الصفحة =====
+function changePage(direction) {
+    const totalPages = Math.ceil(products.length / productsPerPage);
+    const newPage = currentPage + direction;
+    
+    if (newPage >= 1 && newPage <= totalPages) {
+        currentPage = newPage;
+        renderProducts();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+}
+
+// ===== المفضلة =====
+function toggleFavorite(productId) {
+    const product = products.find(p => p.id === productId);
+    if (product) {
+        product.isFavorite = !product.isFavorite;
+        renderProducts();
+        renderFeaturedProducts();
+        
+        // تأثير بصري
+        const btn = document.querySelector(`[data-id="${productId}"] .action-btn:first-child`);
+        if (btn) {
+            btn.style.transform = 'scale(1.3)';
+            setTimeout(() => btn.style.transform = 'scale(1)', 200);
+        }
+    }
+}
+
+// ===== مشاركة =====
+function shareProduct(productId) {
+    const product = products.find(p => p.id === productId);
+    if (product) {
+        const text = `شاهد هذا المنتج من سند ستور: ${product.name}`;
+        const url = window.location.href;
+        
+        if (navigator.share) {
+            navigator.share({
+                title: product.name,
+                text: text,
+                url: url
+            });
+        } else {
+            // نسخ للحافظة
+            const fullText = `${text}\n${url}`;
+            navigator.clipboard.writeText(fullText).then(() => {
+                showNotification('تم نسخ رابط المنتج!');
+            });
+        }
+    }
+}
+
+// ===== إشعار =====
+function showNotification(message) {
+    const notif = document.createElement('div');
+    notif.className = 'notification';
+    notif.innerHTML = `
+        <i class="fas fa-check-circle"></i>
+        <span>${message}</span>
+    `;
+    document.body.appendChild(notif);
+    
+    setTimeout(() => notif.classList.add('show'), 10);
+    setTimeout(() => {
+        notif.classList.remove('show');
+        setTimeout(() => notif.remove(), 300);
+    }, 3000);
+}
+
+// ===== السلة =====
+function addToCart(product) {
+    const existing = cart.find(item => item.id === product.id);
+    if (!existing) {
+        cart.push({ ...product, quantity: 1 });
+        saveCart();
+        updateCartCount();
+    }
+}
+
+function updateCartCount() {
+    const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const cartCount = document.getElementById('cartCount');
+    if (cartCount) {
+        cartCount.textContent = count;
+        cartCount.style.animation = 'none';
+        setTimeout(() => cartCount.style.animation = 'bounce 0.5s', 10);
+    }
+}
+
+function toggleCart() {
+    if (cart.length === 0) {
+        showNotification('السلة فارغة');
+        return;
+    }
+    
+    let message = '🛒 محتويات السلة:\n\n';
+    cart.forEach(item => {
+        message += `• ${item.name}\n`;
+    });
+    message += `\nهل تريد طلب أسعار هذه المنتجات؟`;
+    
+    if (confirm(message)) {
+        const productIds = cart.map(item => item.id).join(',');
+        requestPrice(cart[0].id);
+    }
+}
+
+function saveCart() {
+    localStorage.setItem('sindCart', JSON.stringify(cart));
+}
+
+function loadCart() {
+    const saved = localStorage.getItem('sindCart');
+    if (saved) {
+        cart = JSON.parse(saved);
+    }
+}
+
+// ===== القائمة الجانبية =====
+function toggleMenu() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('active');
+    
+    // إغلاق عند النقر خارجها
+    if (sidebar.classList.contains('active')) {
+        setTimeout(() => {
+            document.addEventListener('click', closeSidebarOutside);
+        }, 100);
+    }
+}
+
+function closeSidebarOutside(e) {
+    const sidebar = document.getElementById('sidebar');
+    const menuBtn = document.querySelector('.menu-btn');
+    
+    if (!sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+        sidebar.classList.remove('active');
+        document.removeEventListener('click', closeSidebarOutside);
+    }
+}
+
+// ===== واتساب =====
+function openWhatsApp() {
+    const message = 'مرحباً سند ستور، أرغب في الاستفسار عن المنتجات';
+    window.open(`https://wa.me/249913678918?text=${encodeURIComponent(message)}`, '_blank');
+}
+
+// ===== التمرير للمنتجات =====
+function scrollToProducts() {
+    const products = document.getElementById('products');
+    if (products) {
+        products.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+// ===== تصفية حسب التصنيف =====
+function filterByCategory(category) {
+    window.location.href = `sind-store.html?category=${category}`;
+}
+
+// ===== قراءة بارامترات URL =====
+window.addEventListener('load', function() {
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get('category');
+    if (category) {
+        currentFilter = category;
+        renderProducts();
+        
+        // تحديث الزر النشط
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.dataset.category === category) {
+                btn.classList.add('active');
+            }
+        });
+    }
+});
+
+// ===== إغلاق النافذة بالـ ESC =====
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+});
