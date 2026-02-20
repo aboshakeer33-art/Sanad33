@@ -1,23 +1,17 @@
-
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>منتجات سند 33</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             min-height: 100vh;
             padding: 20px;
         }
-
         h1 {
             text-align: center;
             color: #d4af37;
@@ -25,14 +19,12 @@
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
-
         .subtitle {
             text-align: center;
             color: #aaa;
             margin-bottom: 40px;
             font-size: 1.2em;
         }
-
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -40,7 +32,6 @@
             max-width: 1600px;
             margin: 0 auto;
         }
-
         .product-card {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 15px;
@@ -49,13 +40,11 @@
             transition: all 0.3s;
             backdrop-filter: blur(10px);
         }
-
         .product-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3);
             border-color: #d4af37;
         }
-
         .product-card img {
             width: 100%;
             height: 280px;
@@ -63,17 +52,14 @@
             display: block;
             border-bottom: 2px solid #d4af37;
         }
-
         .product-info {
             padding: 15px;
             text-align: center;
         }
-
         .product-info h3 {
             color: #d4af37;
             font-size: 1.2em;
         }
-
         @media (max-width: 768px) {
             .gallery {
                 grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -82,9 +68,7 @@
             .product-card img {
                 height: 180px;
             }
-            h1 {
-                font-size: 1.8em;
-            }
+            h1 { font-size: 1.8em; }
         }
     </style>
 </head>
@@ -96,20 +80,19 @@
     <div class="gallery" id="gallery"></div>
 
     <script>
-        // توليد روابط الصور تلقائياً من 0 إلى 72 (73 صورة)
+        // ✅ توليد روابط الصور - 73 صورة
         const products = [];
         
-        for (let i = 0; i <= 72; i++) {
-            // تنسيق الرقم بأصفار (مثال: 5 becomes 0005, 23 becomes 0023)
+        for (let i = 0; i < 73; i++) {
             const num = i.toString().padStart(4, '0');
             products.push({
                 id: i + 1,
                 name: `منتج ${i + 1}`,
-                image: `https://raw.githubusercontent.com/aboshakeer33/Sanad33/main/images/IMG-20260220-WA${num}.jpg`
+                // ✅ اسم المستخدم الصحيح: aboshakeer33-art
+                image: `https://raw.githubusercontent.com/aboshakeer33-art/Sanad33/main/images/IMG-20260220-WA${num}.jpg`
             });
         }
 
-        // عرض المنتجات
         const gallery = document.getElementById('gallery');
         
         products.forEach(product => {
@@ -119,7 +102,7 @@
                 <img src="${product.image}" 
                      alt="${product.name}" 
                      loading="lazy"
-                     onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\\'height:280px;display:flex;align-items:center;justify-content:center;color:#d4af37;\\'>${product.name}</div>'">
+                     onerror="this.src='https://via.placeholder.com/400x300?text=صورة+${product.id}+غير+متوفرة'">
                 <div class="product-info">
                     <h3>${product.name}</h3>
                 </div>
