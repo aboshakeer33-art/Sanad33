@@ -1,10 +1,9 @@
-// ===== بيانات المنتجات =====
+// ===== بيانات المنتجات (بدون أسعار) =====
 const products = [
     {
         id: 1,
         name: "مقبض باب خشبي فاخر",
-        description: "مقبض عالي الجودة للأبواب الخشبية",
-        price: 2500,
+        description: "مقبض عالي الجودة للأبواب الخشبية بتصميم كلاسيكي أنيق",
         category: "masak",
         image: "images/products/masak1.jpg",
         isNew: true,
@@ -12,9 +11,8 @@ const products = [
     },
     {
         id: 2,
-        name: "مقبض باب معدني",
-        description: "مقبض معدني مقاوم للصدأ",
-        price: 1800,
+        name: "مقبض باب معدني عصري",
+        description: "مقبض معدني مقاوم للصدأ بتصميم عصري",
         category: "masak",
         image: "images/products/masak2.jpg",
         isNew: false,
@@ -23,8 +21,7 @@ const products = [
     {
         id: 3,
         name: "مقبض درج كلاسيك",
-        description: "مقبض أنيق للأدراج والدواليب",
-        price: 1200,
+        description: "مقبض أنيق للأدراج والدواليب بجودة عالية",
         category: "masak",
         image: "images/products/masak3.jpg",
         isNew: false,
@@ -33,8 +30,7 @@ const products = [
     {
         id: 4,
         name: "مفصلة باب خشبي فاخرة",
-        description: "مفصلة عالية الجودة للأبواب الخشبية",
-        price: 800,
+        description: "مفصلة عالية الجودة للأبواب الخشبية الثقيلة",
         category: "mafsal",
         image: "images/products/mafsal1.jpg",
         isNew: true,
@@ -43,8 +39,7 @@ const products = [
     {
         id: 5,
         name: "مفصلة معدنية ثقيلة",
-        description: "مفصلة قوية تحمل الأبواب الثقيلة",
-        price: 1500,
+        description: "مفصلة قوية تحمل الأبواب الثقيلة بسهولة",
         category: "mafsal",
         image: "images/products/mafsal2.jpg",
         isNew: false,
@@ -53,8 +48,7 @@ const products = [
     {
         id: 6,
         name: "مفصلة ذاتية الإغلاق",
-        description: "مفصلة ذاتية الإغلاق للأبواب",
-        price: 2000,
+        description: "مفصلة ذاتية الإغلاق للأبواب مع خاصية التهدئة",
         category: "mafsal",
         image: "images/products/mafsal3.jpg",
         isNew: true,
@@ -63,8 +57,7 @@ const products = [
     {
         id: 7,
         name: "قفل باب أمان",
-        description: "قفل أمان عالي الجودة",
-        price: 3500,
+        description: "قفل أمان عالي الجودة مع مفاتيح احتياطية",
         category: "lock",
         image: "images/products/lock1.jpg",
         isNew: false,
@@ -73,8 +66,7 @@ const products = [
     {
         id: 8,
         name: "قفل درج صغير",
-        description: "قفل مخصص للأدراج والدواليب",
-        price: 900,
+        description: "قفل مخصص للأدراج والدواليب بمفتاح صغير",
         category: "lock",
         image: "images/products/lock2.jpg",
         isNew: false,
@@ -82,9 +74,8 @@ const products = [
     },
     {
         id: 9,
-        name: "قفل إلكتروني",
-        description: "قفل إلكتروني حديث بالبصمة",
-        price: 15000,
+        name: "قفل إلكتروني ذكي",
+        description: "قفل إلكتروني حديث بالبصمة وكلمة المرور",
         category: "lock",
         image: "images/products/lock3.jpg",
         isNew: true,
@@ -92,9 +83,8 @@ const products = [
     },
     {
         id: 10,
-        name: "مزلاج باب",
-        description: "مزلاج أمان إضافي للأبواب",
-        price: 600,
+        name: "مزلاج باب أمان",
+        description: "مزلاج أمان إضافي للأبواب الداخلية والخارجية",
         category: "other",
         image: "images/products/other1.jpg",
         isNew: false,
@@ -102,9 +92,8 @@ const products = [
     },
     {
         id: 11,
-        name: "ستاند باب",
-        description: "ستاند لمنع إغلاق الباب",
-        price: 400,
+        name: "ستاند باب معدني",
+        description: "ستاند لمنع إغلاق الباب بقوة الرياح",
         category: "other",
         image: "images/products/other2.jpg",
         isNew: false,
@@ -112,9 +101,8 @@ const products = [
     },
     {
         id: 12,
-        name: "نظارة باب",
-        description: "نظارة للأبواب الخارجية",
-        price: 1200,
+        name: "نظارة باب عريضة",
+        description: "نظارة للأبواب الخارجية بزاوية رؤية واسعة",
         category: "other",
         image: "images/products/other3.jpg",
         isNew: false,
@@ -122,9 +110,8 @@ const products = [
     },
     {
         id: 13,
-        name: "مقبض باب زجاجي",
-        description: "مقبض مخصص للأبواب الزجاجية",
-        price: 3000,
+        name: "مقبض باب زجاجي فاخر",
+        description: "مقبض مخصص للأبواب الزجاجية بتصميم مميز",
         category: "masak",
         image: "images/products/masak4.jpg",
         isNew: true,
@@ -132,9 +119,8 @@ const products = [
     },
     {
         id: 14,
-        name: "مفصلة زاوية",
-        description: "مفصلة زاوية للأبواب الثقيلة",
-        price: 2200,
+        name: "مفصلة زاوية م concealed",
+        description: "مفصلة زاوية مخفية للأبواب الثقيلة",
         category: "mafsal",
         image: "images/products/mafsal4.jpg",
         isNew: false,
@@ -142,9 +128,8 @@ const products = [
     },
     {
         id: 15,
-        name: "قفل خزنة",
-        description: "قفل أمان للخزنات والصناديق",
-        price: 2500,
+        name: "قفل خزنة إلكتروني",
+        description: "قفل أمان إلكتروني للخزنات والصناديق",
         category: "lock",
         image: "images/products/lock4.jpg",
         isNew: false,
@@ -152,9 +137,8 @@ const products = [
     },
     {
         id: 16,
-        name: "سلسلة باب",
-        description: "سلسلة أمان للأبواب",
-        price: 500,
+        name: "سلسلة باب أمان",
+        description: "سلسلة أمان للأبواب مع قفل صغير",
         category: "other",
         image: "images/products/other4.jpg",
         isNew: false,
@@ -174,16 +158,56 @@ document.addEventListener('DOMContentLoaded', function() {
     renderFeaturedProducts();
     renderProducts();
     updateCartCount();
+    initParticles();
+    initScrollEffects();
 });
 
-// ===== عرض المنتجات المميزة (الصفحة الرئيسية) =====
+// ===== تأثير الجسيمات =====
+function initParticles() {
+    const container = document.getElementById('particles');
+    if (!container) return;
+    
+    for (let i = 0; i < 50; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 15 + 's';
+        particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+        container.appendChild(particle);
+    }
+}
+
+// ===== تأثيرات التمرير =====
+function initScrollEffects() {
+    const header = document.querySelector('.luxury-header');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+        
+        // تأثير الظهور التدريجي للعناصر
+        const elements = document.querySelectorAll('.feature-card, .product-card, .category-card');
+        elements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.85) {
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            }
+        });
+    });
+}
+
+// ===== عرض المنتجات المميزة =====
 function renderFeaturedProducts() {
     const container = document.getElementById('featuredProducts');
     if (!container) return;
     
     const featured = products.filter(p => p.isNew || p.isFavorite).slice(0, 4);
     
-    container.innerHTML = featured.map(product => createProductCard(product)).join('');
+    container.innerHTML = featured.map(product => createLuxuryProductCard(product)).join('');
 }
 
 // ===== عرض المنتجات (صفحة المتجر) =====
@@ -216,7 +240,8 @@ function renderProducts() {
     filtered = sortProductsList(filtered, sortValue);
     
     // تحديث العداد
-    document.getElementById('productsCount').textContent = filtered.length;
+    const countEl = document.getElementById('productsCount');
+    if (countEl) countEl.textContent = filtered.length;
     
     // الترقيم
     const totalPages = Math.ceil(filtered.length / productsPerPage);
@@ -226,42 +251,49 @@ function renderProducts() {
     // عرض المنتجات
     if (paginated.length === 0) {
         container.innerHTML = `
-            <div class="no-products" style="grid-column: 1/-1;">
+            <div class="no-products">
                 <i class="fas fa-box-open"></i>
                 <h3>لا توجد منتجات</h3>
-                <p>جرب البحث بكلمات مختلفة</p>
+                <p>جرب البحث بكلمات مختلفة أو تصفح التصنيفات</p>
             </div>
         `;
     } else {
-        container.innerHTML = paginated.map(product => createProductCard(product)).join('');
+        container.innerHTML = paginated.map(product => createLuxuryProductCard(product)).join('');
     }
     
     // تحديث الترقيم
-    document.getElementById('currentPage').textContent = currentPage;
-    document.getElementById('totalPages').textContent = totalPages || 1;
+    const currentPageEl = document.getElementById('currentPage');
+    const totalPagesEl = document.getElementById('totalPages');
+    if (currentPageEl) currentPageEl.textContent = currentPage;
+    if (totalPagesEl) totalPagesEl.textContent = totalPages || 1;
 }
 
-// ===== إنشاء بطاقة المنتج =====
-function createProductCard(product) {
+// ===== إنشاء بطاقة المنتج الفاخرة (بدون سعر) =====
+function createLuxuryProductCard(product) {
     return `
         <div class="product-card" data-id="${product.id}">
             <div class="product-image">
-                <img src="${product.image}" alt="${product.name}" onerror="this.src='https://via.placeholder.com/300x200/1a1a2e/d4af37?text=${encodeURIComponent(product.name)}'">
+                <img src="${product.image}" alt="${product.name}" onerror="this.src='https://via.placeholder.com/400x300/1a1a2e/d4af37?text=${encodeURIComponent(product.name)}'">
                 ${product.isNew ? '<div class="badge"><i class="fas fa-star"></i> جديد</div>' : ''}
+                <div class="product-overlay">
+                    <button class="quick-view" onclick="showProductDetails(${product.id})">
+                        عرض التفاصيل
+                    </button>
+                </div>
             </div>
             <div class="product-info">
                 <h3 class="product-title">${product.name}</h3>
                 <p class="product-description">${product.description}</p>
-                <div class="product-price">${product.price.toLocaleString()} جنيه</div>
-                <div class="product-actions">
+                <div class="product-request">
                     <button class="action-btn ${product.isFavorite ? 'active' : ''}" onclick="toggleFavorite(${product.id})">
                         <i class="fas fa-heart"></i>
                     </button>
                     <button class="action-btn" onclick="shareProduct(${product.id})">
                         <i class="fas fa-share-alt"></i>
                     </button>
-                    <button class="order-now-btn" onclick="orderProduct(${product.id})">
-                        اطلب الآن <i class="fas fa-shopping-cart"></i>
+                    <button class="request-btn" onclick="requestPrice(${product.id})">
+                        <span>اطلب السعر</span>
+                        <i class="fab fa-whatsapp"></i>
                     </button>
                 </div>
             </div>
@@ -269,207 +301,66 @@ function createProductCard(product) {
     `;
 }
 
-// ===== ترتيب المنتجات =====
-function sortProductsList(list, sortValue) {
-    const sorted = [...list];
-    switch(sortValue) {
-        case 'price-low':
-            return sorted.sort((a, b) => a.price - b.price);
-        case 'price-high':
-            return sorted.sort((a, b) => b.price - a.price);
-        case 'newest':
-            return sorted.sort((a, b) => b.id - a.id);
-        default:
-            return sorted.sort((a, b) => a.name.localeCompare(b.name, 'ar'));
+// ===== عرض تفاصيل المنتج =====
+function showProductDetails(productId) {
+    const product = products.find(p => p.id === productId);
+    if (!product) return;
+    
+    // إنشاء نافذة منبثقة فاخرة
+    const modal = document.createElement('div');
+    modal.className = 'product-modal';
+    modal.innerHTML = `
+        <div class="modal-overlay" onclick="closeModal()"></div>
+        <div class="modal-content luxury-modal">
+            <button class="modal-close" onclick="closeModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-image">
+                <img src="${product.image}" alt="${product.name}" onerror="this.src='https://via.placeholder.com/500x400/1a1a2e/d4af37?text=${encodeURIComponent(product.name)}'">
+            </div>
+            <div class="modal-info">
+                ${product.isNew ? '<span class="modal-badge">جديد</span>' : ''}
+                <h2>${product.name}</h2>
+                <p class="modal-description">${product.description}</p>
+                <div class="modal-features">
+                    <div class="feature-tag"><i class="fas fa-check"></i> جودة عالية</div>
+                    <div class="feature-tag"><i class="fas fa-check"></i> ضمان سنة</div>
+                    <div class="feature-tag"><i class="fas fa-check"></i> توصيل سريع</div>
+                </div>
+                <button class="modal-cta" onclick="requestPrice(${product.id}); closeModal();">
+                    <i class="fab fa-whatsapp"></i>
+                    اطلب السعر الآن
+                </button>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+    document.body.style.overflow = 'hidden';
+    
+    // أنيميشن الظهور
+    setTimeout(() => {
+        modal.querySelector('.modal-content').classList.add('active');
+    }, 10);
+}
+
+// ===== إغلاق النافذة المنبثقة =====
+function closeModal() {
+    const modal = document.querySelector('.product-modal');
+    if (modal) {
+        modal.querySelector('.modal-content').classList.remove('active');
+        setTimeout(() => {
+            modal.remove();
+            document.body.style.overflow = '';
+        }, 300);
     }
 }
 
-// ===== البحث =====
-function searchProducts() {
-    currentPage = 1;
-    renderProducts();
-}
-
-// ===== ترتيب =====
-function sortProducts() {
-    renderProducts();
-}
-
-// ===== تصفية =====
-function filterProducts(category) {
-    currentFilter = category;
-    currentPage = 1;
-    
-    // تحديث الأزرار النشطة
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.classList.remove('active');
-    });
-    event.target.classList.add('active');
-    
-    renderProducts();
-}
-
-// ===== تغيير الصفحة =====
-function changePage(direction) {
-    const totalPages = Math.ceil(products.length / productsPerPage);
-    const newPage = currentPage + direction;
-    
-    if (newPage >= 1 && newPage <= totalPages) {
-        currentPage = newPage;
-        renderProducts();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-}
-
-// ===== المفضلة =====
-function toggleFavorite(productId) {
+// ===== طلب السعر (بدل الطلب المباشر) =====
+function requestPrice(productId) {
     const product = products.find(p => p.id === productId);
     if (product) {
-        product.isFavorite = !product.isFavorite;
-        renderProducts();
-        renderFeaturedProducts();
-    }
-}
-
-// ===== مشاركة =====
-function shareProduct(productId) {
-    const product = products.find(p => p.id === productId);
-    if (product) {
-        const text = `شاهد هذا المنتج: ${product.name} - ${product.price} جنيه`;
-        if (navigator.share) {
-            navigator.share({
-                title: product.name,
-                text: text,
-                url: window.location.href
-            });
-        } else {
-            // نسخ للحافظة
-            navigator.clipboard.writeText(text).then(() => {
-                alert('تم نسخ تفاصيل المنتج!');
-            });
-        }
-    }
-}
-
-// ===== الطلب =====
-function orderProduct(productId) {
-    const product = products.find(p => p.id === productId);
-    if (product) {
-        const message = `مرحباً، أريد طلب المنتج التالي:\n\n` +
-                       `المنتج: ${product.name}\n` +
-                       `السعر: ${product.price.toLocaleString()} جنيه\n` +
-                       `الوصف: ${product.description}\n\n` +
-                       `رقم المنتج: #${product.id}`;
-        
-        const whatsappUrl = `https://wa.me/249913678918?text=${encodeURIComponent(message)}`;
-        window.open(whatsappUrl, '_blank');
-        
-        // إضافة للسلة
-        addToCart(product);
-    }
-}
-
-// ===== السلة =====
-function addToCart(product) {
-    const existing = cart.find(item => item.id === product.id);
-    if (!existing) {
-        cart.push({ ...product, quantity: 1 });
-        saveCart();
-        updateCartCount();
-    }
-}
-
-function updateCartCount() {
-    const count = cart.reduce((sum, item) => sum + item.quantity, 0);
-    document.getElementById('cartCount').textContent = count;
-}
-
-function toggleCart() {
-    if (cart.length === 0) {
-        alert('السلة فارغة');
-        return;
-    }
-    
-    let message = 'محتويات السلة:\n\n';
-    let total = 0;
-    
-    cart.forEach(item => {
-        message += `${item.name} - ${item.price.toLocaleString()} جنيه\n`;
-        total += item.price * item.quantity;
-    });
-    
-    message += `\nالإجمالي: ${total.toLocaleString()} جنيه`;
-    message += `\n\nهل تريد إتمام الطلب؟`;
-    
-    if (confirm(message)) {
-        orderProduct(cart[0].id);
-    }
-}
-
-function saveCart() {
-    localStorage.setItem('sindCart', JSON.stringify(cart));
-}
-
-function loadCart() {
-    const saved = localStorage.getItem('sindCart');
-    if (saved) {
-        cart = JSON.parse(saved);
-    }
-}
-
-// ===== القائمة الجانبية =====
-function toggleMenu() {
-    document.getElementById('sidebar').classList.toggle('active');
-}
-
-// ===== واتساب =====
-function openWhatsApp() {
-    window.open('https://wa.me/249913678918', '_blank');
-}
-
-// ===== التمرير للمنتجات =====
-function scrollToProducts() {
-    document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
-}
-
-// ===== تصفية حسب التصنيف (من الصفحة الرئيسية) =====
-function filterByCategory(category) {
-    window.location.href = `sind-store.html?category=${category}`;
-}
-
-// ===== قراءة بارامترات URL =====
-window.addEventListener('load', function() {
-    const params = new URLSearchParams(window.location.search);
-    const category = params.get('category');
-    if (category) {
-        currentFilter = category;
-        // تحديث الزر النشط
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.classList.remove('active');
-            if (btn.textContent.includes(getCategoryName(category))) {
-                btn.classList.add('active');
-            }
-        });
-        renderProducts();
-    }
-});
-
-function getCategoryName(cat) {
-    const names = {
-        'masak': 'مقابض',
-        'mafsal': 'مفصلات',
-        'lock': 'أقفال',
-        'other': 'أخرى'
-    };
-    return names[cat] || '';
-}
-
-// ===== إغلاق القائمة عند النقر خارجها =====
-document.addEventListener('click', function(e) {
-    const sidebar = document.getElementById('sidebar');
-    const menuBtn = document.querySelector('.menu-btn');
-    
-    if (sidebar && !sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
-        sidebar.classList.remove('active');
-    }
-});
+        const message = `مرحباً سند ستور،\n\n` +
+                       `أرغب في الاستفسار عن سعر المنتج التالي:\n\n` +
+                       `🏷️ *المنتج:* ${product.name}\n` +
+                      
