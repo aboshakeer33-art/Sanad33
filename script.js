@@ -357,3 +357,13 @@ function fixImagePaths() {
 
 // في الـ HTML استخدم:
 // <img data-src="images/product.jpg" alt="منتج">
+// ضيف ده في ملف script.js
+const IMAGE_BASE_URL = 'https://raw.githubusercontent.com/اسمك/المستودع/main/';
+
+function loadImage(imgName) {
+    return IMAGE_BASE_URL + imgName;
+}
+
+// استخدمه كده:
+// <img id="myImg">
+// document.getElementById('myImg').src = loadImage('images/product1.jpg');
