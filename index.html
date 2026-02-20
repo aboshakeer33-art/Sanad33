@@ -1,115 +1,265 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منتجات سند 33</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-            color: #d4af37;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-        .subtitle {
-            text-align: center;
-            color: #aaa;
-            margin-bottom: 40px;
-            font-size: 1.2em;
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
-            max-width: 1600px;
-            margin: 0 auto;
-        }
-        .product-card {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            overflow: hidden;
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            transition: all 0.3s;
-            backdrop-filter: blur(10px);
-        }
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3);
-            border-color: #d4af37;
-        }
-        .product-card img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            display: block;
-            border-bottom: 2px solid #d4af37;
-        }
-        .product-info {
-            padding: 15px;
-            text-align: center;
-        }
-        .product-info h3 {
-            color: #d4af37;
-            font-size: 1.2em;
-        }
-        @media (max-width: 768px) {
-            .gallery {
-                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-                gap: 10px;
-            }
-            .product-card img {
-                height: 180px;
-            }
-            h1 { font-size: 1.8em; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سند للأكسسوارات | الخرطوم بحري</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Tahoma,Arial}
+body{background:#0f0f0f;color:#fff;line-height:1.8}
+
+header{
+background:#1a1a1a;
+padding:20px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+border-bottom:2px solid #d4af37;
+}
+
+.logo{
+font-size:28px;
+font-weight:800;
+color:#d4af37;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:25px;
+font-size:18px;
+transition:.3s;
+}
+nav a:hover{color:#d4af37}
+
+.hero{
+height:85vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8));
+}
+
+.hero h1{
+font-size:48px;
+color:#d4af37;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
+max-width:800px;
+margin-bottom:30px;
+}
+
+.btn{
+background:#d4af37;
+color:#000;
+padding:14px 35px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+.btn:hover{background:#b9962f}
+
+.products{
+padding:60px 40px;
+text-align:center;
+}
+
+.section-title{
+font-size:34px;
+color:#d4af37;
+margin-bottom:10px;
+}
+
+.products-count{
+color:#888;
+margin-bottom:40px;
+font-size:18px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+max-width:1400px;
+margin:auto;
+}
+
+.card{
+background:#1a1a1a;
+padding:20px;
+border-radius:15px;
+transition:.3s;
+border:1px solid #333;
+}
+.card:hover{
+transform:translateY(-10px);
+border-color:#d4af37;
+box-shadow:0 10px 30px rgba(212,175,55,.1);
+}
+
+.card img{
+width:100%;
+height:280px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:15px;
+background:#222;
+display:block;
+}
+
+.card h3{
+color:#d4af37;
+margin-bottom:10px;
+font-size:20px;
+}
+
+.card p{
+margin-bottom:15px;
+color:#aaa;
+font-size:14px;
+}
+
+.order-btn{
+background:#25D366;
+color:#fff;
+padding:10px 25px;
+border-radius:20px;
+text-decoration:none;
+display:inline-block;
+font-weight:bold;
+transition:.3s;
+}
+.order-btn:hover{
+background:#128C7E;
+transform:scale(1.05);
+}
+
+.contact{
+padding:60px 40px;
+background:#1a1a1a;
+text-align:center;
+}
+
+footer{
+background:#000;
+padding:25px;
+text-align:center;
+border-top:2px solid #d4af37;
+color:#888;
+}
+
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+box-shadow:0 8px 20px rgba(0,0,0,.5);
+z-index:999;
+text-decoration:none;
+font-size:28px;
+color:#fff;
+transition:.3s;
+}
+.whatsapp-float:hover{
+transform:scale(1.1);
+}
+
+@media(max-width:768px){
+.hero h1{font-size:32px}
+.logo{font-size:20px}
+.grid{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+}
+</style>
 </head>
+
 <body>
 
-    <h1>✨ سند 33 ✨</h1>
-    <p class="subtitle">73 منتج فاخر</p>
+<header>
+<div class="logo">سند للأكسسوارات - الخرطوم بحري</div>
+<nav>
+<a href="#">الرئيسية</a>
+<a href="#products">المنتجات</a>
+<a href="#contact">تواصل معنا</a>
+</nav>
+</header>
 
-    <div class="gallery" id="gallery"></div>
+<section class="hero">
+<h1>أفضل اكسسوارات الأبواب والمطابخ</h1>
+<p>نوفر لكم أفضل المفصلات، الأقفال، والمقابض بجودة عالية وخدمة سريعة داخل الخرطوم بحري.</p>
+<a href="#products" class="btn">تصفح المنتجات</a>
+</section>
 
-    <script>
-        // ✅ توليد روابط الصور - 73 صورة
-        const products = [];
-        
-        for (let i = 0; i < 73; i++) {
-            const num = i.toString().padStart(4, '0');
-            products.push({
-                id: i + 1,
-                name: `منتج ${i + 1}`,
-                // ✅ اسم المستخدم الصحيح: aboshakeer33-art
-                image: `https://raw.githubusercontent.com/aboshakeer33-art/Sanad33/main/images/IMG-20260220-WA${num}.jpg`
-            });
-        }
+<section class="products" id="products">
+<h2 class="section-title">منتجاتنا</h2>
+<p class="products-count">✨ 73 منتج متوفر ✨</p>
 
-        const gallery = document.getElementById('gallery');
-        
-        products.forEach(product => {
-            const card = document.createElement('div');
-            card.className = 'product-card';
-            card.innerHTML = `
-                <img src="${product.image}" 
-                     alt="${product.name}" 
-                     loading="lazy"
-                     onerror="this.src='https://via.placeholder.com/400x300?text=صورة+${product.id}+غير+متوفرة'">
-                <div class="product-info">
-                    <h3>${product.name}</h3>
-                </div>
-            `;
-            gallery.appendChild(card);
-        });
-    </script>
+<div class="grid" id="productsGrid">
+<!-- المنتجات تُضاف هنا تلقائياً -->
+</div>
+</section>
+
+<section class="contact" id="contact">
+<h2 class="section-title">تواصل معنا</h2>
+<p style="font-size:20px;margin:10px 0">📍 الموقع: الخرطوم بحري</p>
+<p style="font-size:20px;margin:10px 0">📱 واتساب: <span style="color:#d4af37;font-weight:bold">+249 91 367 8918</span></p>
+</section>
+
+<footer>
+© جميع الحقوق محفوظة - سند للأكسسوارات - الخرطوم بحري
+</footer>
+
+<a href="https://wa.me/249913678918" class="whatsapp-float">💬</a>
+
+<script>
+const number="249913678918";
+const productsGrid = document.getElementById('productsGrid');
+
+// إنشاء 73 منتج مع الصور من GitHub
+for (let i = 0; i < 73; i++) {
+    const num = i.toString().padStart(4, '0');
+    const productNum = i + 1;
+    
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+        <img src="https://raw.githubusercontent.com/aboshakeer33-art/Sanad33/main/images/IMG-20260220-WA${num}.jpg" 
+             alt="منتج ${productNum}" 
+             loading="lazy"
+             onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23111%22 width=%22400%22 height=%22300%22/><text x=%22200%22 y=%22150%22 fill=%22%23d4af37%22 text-anchor=%22middle%22 font-size=%2220%22>منتج ${productNum}</text></svg>'">
+        <h3>منتج فاخر ${productNum}</h3>
+        <p>جودة عالية - متوفر في الخرطوم بحري</p>
+        <a href="#" class="order-btn" data-product="منتج رقم ${productNum}">استفسر الآن</a>
+    `;
+    productsGrid.appendChild(card);
+}
+
+// وظيفة الواتساب
+document.querySelectorAll(".order-btn").forEach(btn=>{
+    btn.addEventListener("click",function(e){
+        e.preventDefault();
+        let product=this.getAttribute("data-product");
+        let msg=`السلام عليكم، أنا من الخرطوم بحري وأريد الاستفسار عن: ${product}`;
+        window.open(`https://wa.me/${number}?text=${encodeURIComponent(msg)}`,"_blank");
+    });
+});
+</script>
 
 </body>
 </html>
